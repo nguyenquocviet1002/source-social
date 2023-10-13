@@ -1,0 +1,19 @@
+.main {
+  &__layout {
+    position: relative;
+  }
+  &__body {
+    padding-top: 4.375rem;
+    margin-left: 15rem;
+    transition: all 0.2s ease;
+  }
+  &__content {
+    padding-top: 1.525rem;
+    padding-bottom: 1.525rem;
+  }
+  @media (max-width: 1024px) {
+    &__body {
+      margin-left: 0;
+    }
+  }
+}

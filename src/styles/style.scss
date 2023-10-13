@@ -1,0 +1,22 @@
+@import 'modal';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+html,
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  line-height: normal;
+  background-color: #f3f0ec;
+}
+
+.container-full {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .container-full {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
