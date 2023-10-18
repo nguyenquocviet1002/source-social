@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
 const http = axios.create({
-    baseURL: 'https://scigroup.com.vn/cp/seeding/api',
-})
+  baseURL: 'https://scigroup.com.vn/app/tiktok/api',
+});
 
-export default http
+export default http;
