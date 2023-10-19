@@ -273,20 +273,17 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                             <label htmlFor="script" className="modal__label">
                               Nguồn
                             </label>
-                            <select value={info.code_utm_source} onChange={handleChange('code_utm_source')}>
+                            <select
+                              value={info.code_utm_source}
+                              onChange={handleChange('code_utm_source')}
+                              className="modal__formSelect"
+                            >
                               {keySource.map((item, index) => (
                                 <option key={index} value={item}>
                                   {dataSource.data.data[item]}
                                 </option>
                               ))}
                             </select>
-                            <input
-                              type="text"
-                              id="script"
-                              className="modal__input"
-                              value={info.code_utm_source}
-                              onChange={handleChange('code_utm_source')}
-                            />
                           </div>
                         </div>
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>

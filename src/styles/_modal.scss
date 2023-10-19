@@ -78,6 +78,14 @@
       width: 100%;
     }
   }
+  &__formSelect {
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    display: block;
+    outline: none;
+    padding: 8px 5px;
+  }
   &__label {
     color: #111827;
     font-weight: 500;
