@@ -17,7 +17,7 @@ const ScreensRoot = () => {
   const [token, setToken] = useLocalStorage('token', null);
 
   return (
-    <Router basename="/cp/app-seeding">
+    <Router basename="/app/tiktok">
       <Routes>
         <Route index element={token ? <Navigate to="/dashboard/form" replace /> : <Navigate to="/login" replace />} />
         <Route path="login" element={<ScreenLogin />} />

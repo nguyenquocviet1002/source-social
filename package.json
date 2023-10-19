@@ -1,7 +1,7 @@
 {
   "name": "app-seeding",
   "version": "0.1.0",
-  "homepage": "https://scigroup.com.vn/cp/app-seeding",
+  "homepage": "https://scigroup.com.vn/app/tiktok",
   "private": true,
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
