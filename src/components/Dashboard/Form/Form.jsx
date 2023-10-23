@@ -27,7 +27,7 @@ export default function Form() {
   const [codeRemove, setCodeRemove] = useState('');
 
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const { isShowing, cpn, toggle } = useModal();
 
   const info = useMemo(() => {

@@ -10,7 +10,7 @@ import Loading from '@/components/UI/Loading';
 export default function ModalCreateForm({ isShowing, hide, element, token, refetch }) {
   const initialInfo = {
     token: token,
-    type: 'seeding',
+    type: 'tiktok',
     company_id: '',
     name_fb: '',
     link_fb: '',

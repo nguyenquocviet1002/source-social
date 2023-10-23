@@ -23,7 +23,7 @@ export default function Booking() {
   const [isShow, setIsShow] = useState(false);
 
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const { isShowing, cpn, toggle } = useModal();
 
   const info = useMemo(() => {

@@ -13,7 +13,7 @@ import ModalCheckData from '../ModalCheckData';
 
 export default function CheckData() {
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const [inputDate, setInputDate] = useState('');
   const [valueSearch, setValueSearch] = useState('');
   const [dataModal, setDataModal] = useState({ type: '', data: [] });

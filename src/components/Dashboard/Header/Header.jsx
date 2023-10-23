@@ -13,7 +13,7 @@ export default function Header() {
   const { isShowing, cpn, toggle } = useModal();
 
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const navigate = useNavigate();
 
   const { dataUser, isSuccessUser } = useGetUser(token);
