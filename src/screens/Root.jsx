@@ -14,7 +14,7 @@ import CheckData from '@/components/Dashboard/CheckData';
 
 const ScreensRoot = () => {
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
 
   return (
     <Router basename="/app/tiktok">

@@ -17,7 +17,7 @@ export default function Login() {
   const [validate, setValidate] = useState({ status: false, message: '' });
 
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
 
   const handleChange = (name) => (event) => {
     setInfoUser((prev) => ({ ...prev, [name]: event.target.value }));

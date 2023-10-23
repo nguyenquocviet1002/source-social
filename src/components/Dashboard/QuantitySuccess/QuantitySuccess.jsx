@@ -51,7 +51,7 @@ export default function QuantitySuccess() {
   const [isLoading, setIsLoading] = useState(true);
 
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const { dataAllUser, isSuccessAllUser } = useGetAllUser({ token: token, code_user: '' });
   const { dataUser, isSuccessUser } = useGetUser(token);
   const { dataBrands, isSuccessBrand } = useGetBrand(token);

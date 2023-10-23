@@ -10,7 +10,7 @@ import dashboardStyles from './Dashboard.module.scss';
 
 export default function ScreenDashboard() {
   // eslint-disable-next-line no-unused-vars
-  const [token, setToken] = useLocalStorage('token', null);
+  const [token, setToken] = useLocalStorage('tokenSocial', null);
   const [isLayout, setIsLayout] = useState(false);
 
   const handleLayout = () => {
