@@ -24,6 +24,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   };
   // state search
   const [info, setInfo] = useState(initialInfo);
+
   const [company, setCompany] = useState([]);
   const [companyFilter, setCompanyFilter] = useState([]);
   const [isShow, setIsShow] = useState(false);
@@ -61,7 +62,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   });
 
   const handleSubmit = () => {
-    if (!info.name || !info.phone || !info.service || !info.company_id) {
+    if (!info.name || !info.phone || !info.service || !info.company_id || !info.code_utm_source) {
       alert('Vui lòng nhập đầy đủ các trường bắt buộc!!!');
     } else {
       queryCreateForm.refetch();
@@ -271,13 +272,14 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="script" className="modal__label">
-                              Nguồn
+                              Nguồn <span style={{ color: 'red' }}>(*)</span>
                             </label>
                             <select
                               value={info.code_utm_source}
                               onChange={handleChange('code_utm_source')}
                               className="modal__formSelect"
                             >
+                              <option value="">Chọn nguồn</option>
                               {keySource.map((item, index) => (
                                 <option key={index} value={item}>
                                   {dataSource.data.data[item]}
