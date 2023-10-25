@@ -8,7 +8,7 @@ export default function ModalSearchForm({ isShowing, hide, element, token, show,
   const initialInfo = {
     token: token,
     brand_id: '',
-    type: 'tiktok',
+    type: 'seeding',
     limit: 0,
     offset: 0,
     company_id: '',
