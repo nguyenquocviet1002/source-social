@@ -11,7 +11,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   const initialInfo = {
     token: token,
     type: 'seeding',
-    company_id: '',
+    company_id: 'KN.KXD.00',
     name_fb: '',
     link_fb: '',
     phone: '',
@@ -28,7 +28,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   const [company, setCompany] = useState([]);
   const [companyFilter, setCompanyFilter] = useState([]);
   const [isShow, setIsShow] = useState(false);
-  const [valueCompany, setValueCompany] = useState('');
+  const [valueCompany, setValueCompany] = useState('KHÔNG XÁC ĐỊNH - KANGNAM');
   const [keySource, setKeySource] = useState([]);
 
   const { dataCompany, isSuccessCompany } = useGetCompany(token);
@@ -43,7 +43,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
 
   useEffect(() => {
     if (isSuccessSource) {
-      setKeySource(Object.keys(dataSource.data.data));
+      setKeySource(Object.keys(dataSource.data.data).slice(2, 4));
     }
   }, [isSuccessSource, dataSource]);
 
@@ -220,7 +220,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="name-fb" className="modal__label">
-                              Tên FB
+                              Zalo
                             </label>
                             <input
                               type="text"
@@ -232,7 +232,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                           </div>
                           <div className="modal__formGroup">
                             <label htmlFor="link-fb" className="modal__label">
-                              Link FB
+                              Viber/Whatapp
                             </label>
                             <input
                               type="text"
@@ -246,7 +246,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="script" className="modal__label">
-                              Kịch bản
+                              Kênh
                             </label>
                             <input
                               type="text"
