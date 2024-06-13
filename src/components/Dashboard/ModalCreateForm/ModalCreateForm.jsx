@@ -68,7 +68,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
       queryCreateForm.refetch();
       hide();
       setInfo(initialInfo);
-      setValueCompany('');
+      setValueCompany('KHÔNG XÁC ĐỊNH - KANGNAM');
       setCompanyFilter(company);
     }
   };
@@ -125,7 +125,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                       className="modal__close"
                       onClick={() => {
                         hide();
-                        setValueCompany('');
+                        setValueCompany('KHÔNG XÁC ĐỊNH - KANGNAM');
                         setCompanyFilter(company);
                       }}
                     >
@@ -232,7 +232,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                           </div>
                           <div className="modal__formGroup">
                             <label htmlFor="link-fb" className="modal__label">
-                              Viber/Whatapp
+                              Viber/Whatsapp
                             </label>
                             <input
                               type="text"

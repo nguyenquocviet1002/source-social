@@ -185,7 +185,7 @@ export default function ModalUpdateForm({ isShowing, hide, element, token, data,
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="name-fb" className="modal__label">
-                              Tên FB
+                              Zalo
                             </label>
                             <input
                               type="text"
@@ -197,7 +197,7 @@ export default function ModalUpdateForm({ isShowing, hide, element, token, data,
                           </div>
                           <div className="modal__formGroup">
                             <label htmlFor="link-fb" className="modal__label">
-                              Link FB
+                              Viber/Whatsapp
                             </label>
                             <input
                               type="text"
@@ -260,7 +260,7 @@ export default function ModalUpdateForm({ isShowing, hide, element, token, data,
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="script" className="modal__label">
-                              Kịch bản
+                              Kênh
                             </label>
                             <input
                               type="text"

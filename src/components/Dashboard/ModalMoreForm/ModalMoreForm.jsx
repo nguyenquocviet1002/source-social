@@ -66,10 +66,17 @@ export default function ModalMoreForm({ isShowing, hide, element, data, rule }) 
                           />
                         </div>
                         <div className="modal__formGroup">
-                          <label className="modal__label">Facebook</label>
-                          <a className="modal__link" href={data[0].link_fb} target="_blank" rel="noreferrer">
+                          <label className="modal__label">Zalo</label>
+                          <input
+                            type="text"
+                            id="phone"
+                            className="modal__input"
+                            defaultValue={data[0].name_fb}
+                            disabled
+                          />
+                          {/* <a className="modal__link" href={data[0].link_fb} target="_blank" rel="noreferrer">
                             {data[0].name_fb}
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                       <div className="modal__formControl" style={{ marginTop: '15px' }}>
@@ -101,7 +108,7 @@ export default function ModalMoreForm({ isShowing, hide, element, data, rule }) 
                       <div className="modal__formControl" style={{ marginTop: '15px' }}>
                         <div className="modal__formGroup">
                           <label htmlFor="script" className="modal__label">
-                            Kịch bản
+                            Kênh
                           </label>
                           <input type="text" id="script" className="modal__input" defaultValue={data[0].script} />
                         </div>
@@ -137,6 +144,12 @@ export default function ModalMoreForm({ isShowing, hide, element, data, rule }) 
                             </a>
                           </div>
                         )}
+                      </div>
+                      <div className="modal__formControl" style={{ marginTop: '15px' }}>
+                        <div className="modal__formGroup">
+                          <label className="modal__label">Viber/Whatsapp</label>
+                          <input type="text" className="modal__input" defaultValue={data[0].link_fb} disabled />
+                        </div>
                       </div>
                       <div className="modal__formControl" style={{ marginTop: '15px' }}>
                         <div className="modal__formGroup modal__formGroup--single">
