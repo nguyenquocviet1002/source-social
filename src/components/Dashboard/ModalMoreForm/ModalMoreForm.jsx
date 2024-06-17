@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 
+// Đọc tên đặng nhập từ LocalStorage
+const name = localStorage.getItem("name");
+
 export default function ModalMoreForm({ isShowing, hide, element, data, rule }) {
   const ref = useRef(null);
   useEffect(() => {
@@ -134,7 +137,8 @@ export default function ModalMoreForm({ isShowing, hide, element, data, rule }) 
                             disabled
                           />
                         </div>
-                        {rule === 'admin' && (
+                        {/* {rule === 'admin' && ( */}
+                        {name === 'admin_tuan' && (
                           <div className="modal__formGroup">
                             <label htmlFor="time" className="modal__label">
                               Ticket Caresoft

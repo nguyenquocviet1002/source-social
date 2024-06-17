@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useModal } from '@/hooks/useModal';
 import { useLocalStorage } from '@/hooks/useLocalStorage';
@@ -14,9 +14,16 @@ export default function Header() {
 
   // eslint-disable-next-line no-unused-vars
   const [token, setToken] = useLocalStorage('tokenSocial', null);
+
   const navigate = useNavigate();
 
   const { dataUser, isSuccessUser } = useGetUser(token);
+  
+  // Khai báo Tên người dùng vào localStorage
+  useEffect(()=>{
+    localStorage.setItem("name", dataUser && dataUser.data.data.username);
+  }, [dataUser]);
+
 
   const logout = () => {
     localStorage.clear();
