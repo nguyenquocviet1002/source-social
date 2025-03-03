@@ -83,7 +83,8 @@ export default function Form() {
     },
     {
       name: 'Điện thoại',
-      selector: (row) => row.phone,
+      // selector: (row) => row.phone,
+      selector: (row) => row.phone.substring(0, 15), // Giới hạn số ký tự của số điện thoại
     },
     {
       name: 'Dịch vụ đăng ký',
