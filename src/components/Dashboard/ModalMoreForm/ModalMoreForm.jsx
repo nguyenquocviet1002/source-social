@@ -117,11 +117,11 @@ export default function ModalMoreForm({ isShowing, hide, element, data, rule }) 
                         </div>
                         <div className="modal__formGroup">
                           <label htmlFor="interactive-proof" className="modal__label">
-                            Tương tác
+                            Nguồn Data
                           </label>
-                          <a className="modal__link" href={data[0].interactive_proof} target="_blank" rel="noreferrer">
+                          <span className="modal__link">
                             {data[0].interactive_proof ? data[0].interactive_proof : 'Empty'}
-                          </a>
+                          </span>
                         </div>
                       </div>
                       <div className="modal__formControl" style={{ marginTop: '15px' }}>

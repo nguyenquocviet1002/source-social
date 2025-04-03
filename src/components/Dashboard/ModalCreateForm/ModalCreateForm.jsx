@@ -22,6 +22,26 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
     interactive_proof: '',
     code_utm_source: '',
   };
+
+  // Khai báo Data Nguồn
+  const dataChannel = [
+    {
+      id: 1,
+      name: 'Inbox - Quảng cáo',
+    },
+    {
+      id: 2,
+      name: 'Inbox - Tự nhiên',
+    },
+    {
+      id: 3,
+      name: 'Form - Tự nhiên',
+    },
+    {
+      id: 4,
+      name: 'Hotline',
+    },
+  ];
   // state search
   const [info, setInfo] = useState(initialInfo);
 
@@ -62,7 +82,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   });
 
   const handleSubmit = () => {
-    if (!info.name || !info.phone || !info.service || !info.company_id || !info.code_utm_source) {
+    if (!info.name || !info.phone || !info.service || !info.company_id || !info.code_utm_source || !info.interactive_proof) {
       alert('Vui lòng nhập đầy đủ các trường bắt buộc!!!');
     } else {
       queryCreateForm.refetch();
@@ -218,18 +238,36 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                           </div>
                         </div>
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
-                          <div className="modal__formGroup">
-                            <label htmlFor="name-fb" className="modal__label">
-                              Zalo
+                          {/* <div className="modal__formGroup">
+                            <label htmlFor="interactive-proof" className="modal__label">
+                              Tương tác
                             </label>
                             <input
                               type="text"
-                              id="name-fb"
+                              id="interactive-proof"
                               className="modal__input"
-                              value={info.name_fb}
-                              onChange={handleChange('name_fb')}
+                              value={info.interactive_proof}
+                              onChange={handleChange('interactive_proof')}
                             />
+                          </div> */}
+                          <div className="modal__formGroup">
+                            <label htmlFor="script" className="modal__label">
+                              Nguồn Data <span style={{ color: 'red' }}>(*)</span>
+                            </label>
+                            <select
+                              value={info.interactive_proof}
+                              onChange={handleChange('interactive_proof')}
+                              className="modal__formSelect"
+                            >
+                              <option value="">Chọn nguồn</option>
+                              {dataChannel.map((item, index) => (
+                                <option key={index} value={item.name}>
+                                  {item.name}
+                                </option>
+                              ))}
+                            </select>
                           </div>
+                          
                           <div className="modal__formGroup">
                             <label htmlFor="link-fb" className="modal__label">
                               Viber/Whatsapp
@@ -257,18 +295,19 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                             />
                           </div>
                           <div className="modal__formGroup">
-                            <label htmlFor="interactive-proof" className="modal__label">
-                              Tương tác
+                            <label htmlFor="name-fb" className="modal__label">
+                              Zalo
                             </label>
                             <input
                               type="text"
-                              id="interactive-proof"
+                              id="name-fb"
                               className="modal__input"
-                              value={info.interactive_proof}
-                              onChange={handleChange('interactive_proof')}
+                              value={info.name_fb}
+                              onChange={handleChange('name_fb')}
                             />
                           </div>
                         </div>
+                  
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
                           <div className="modal__formGroup">
                             <label htmlFor="script" className="modal__label">
