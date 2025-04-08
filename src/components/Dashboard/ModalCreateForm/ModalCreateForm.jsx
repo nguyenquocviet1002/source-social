@@ -19,7 +19,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
     name: '',
     note: '',
     script: '',
-    interactive_proof: '',
+    interactive_proof: 'Form - Tự nhiên',
     code_utm_source: '',
   };
 
@@ -27,7 +27,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   const dataChannel = [
     {
       id: 1,
-      name: 'Inbox - Quảng cáo',
+      name: 'Form - Tự nhiên',
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
     },
     {
       id: 3,
-      name: 'Form - Tự nhiên',
+      name: 'Inbox - Quảng cáo',
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
   });
 
   const handleSubmit = () => {
-    if (!info.name || !info.phone || !info.service || !info.company_id || !info.code_utm_source || !info.interactive_proof) {
+    if (!info.name || !info.phone || !info.service || !info.company_id || !info.code_utm_source) {
       alert('Vui lòng nhập đầy đủ các trường bắt buộc!!!');
     } else {
       queryCreateForm.refetch();
@@ -238,28 +238,16 @@ export default function ModalCreateForm({ isShowing, hide, element, token, refet
                           </div>
                         </div>
                         <div className="modal__formControl" style={{ marginTop: '15px' }}>
-                          {/* <div className="modal__formGroup">
-                            <label htmlFor="interactive-proof" className="modal__label">
-                              Tương tác
-                            </label>
-                            <input
-                              type="text"
-                              id="interactive-proof"
-                              className="modal__input"
-                              value={info.interactive_proof}
-                              onChange={handleChange('interactive_proof')}
-                            />
-                          </div> */}
                           <div className="modal__formGroup">
                             <label htmlFor="script" className="modal__label">
-                              Nguồn Data <span style={{ color: 'red' }}>(*)</span>
+                              Nguồn Data 
                             </label>
                             <select
                               value={info.interactive_proof}
                               onChange={handleChange('interactive_proof')}
                               className="modal__formSelect"
                             >
-                              <option value="">Chọn nguồn</option>
+                              {/* <option value="">Chọn nguồn</option> */}
                               {dataChannel.map((item, index) => (
                                 <option key={index} value={item.name}>
                                   {item.name}
